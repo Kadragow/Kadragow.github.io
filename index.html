@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Copmatible" content="ie=edge"/>
     <link rel="stylesheet" href="./assets/css/my-styles.css">
     <title>Kamil Blanik | Portfolio</title>
 </head>
@@ -11,29 +12,31 @@
         <nav>
             <h1>Kamil Błanik</h1>
             <ul>
-                <li><a data-page="home" href="#">Home</a></li>
-                <li><a data-page="about" href="#">About</a></li>
-                <li><a data-page="projects" href="#">Projects</a></li>
-                <li><a data-page="contact" href="#">Contact</a></li>
+                <li><a data-page="home" href="#home">Home</a></li>
+                <li><a data-page="about" href="#about">About</a></li>
+                <li><a data-page="projects" href="#projects">Projects</a></li>
+                <li><a data-page="contact" href="#contact">Contact</a></li>
                 <div class="bubble"></div>
+
             </ul>
+            
         </nav>
     </header>
     
     <main>
-        <section data-index="0" class="home">
+        <section id="home" data-index="0" class="home">
             <h2>Home</h2>
         </section>
         
-        <section data-index="1" class="about">
+        <section id="about" data-index="1" class="about">
             <h2>About</h2>
         </section>
 
-        <section data-index="2" class="projects">
+        <section id="projects" data-index="2" class="projects">
             <h2>Projects</h2>
         </section>
         
-        <section data-index="3" class="contact">
+        <section id="contact" data-index="3" class="contact">
             <h2>Contact</h2>
         </section>
     </main>
