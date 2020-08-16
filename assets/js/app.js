@@ -50,3 +50,15 @@ function navCheck(entries){
 sections.forEach(section => {
     observer.observe(section);
 });
+
+const navSlide = () => {
+    const menu = document.querySelector('.hidden-menu');
+    const nav = document.querySelector('.menu-nav');
+
+    menu.addEventListener('click', () => {
+        nav.classList.toggle('menu-nav-active');
+        menu.classList.toggle('hidden-menu-toggle');
+    });
+}
+
+navSlide();
