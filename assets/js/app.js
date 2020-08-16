@@ -30,7 +30,19 @@ function navCheck(entries){
             bubble.style.setProperty("top", `${directions.top}px`);
             bubble.style.setProperty("width", `${directions.width}px`);
             bubble.style.setProperty("height", `${directions.height}px`);
-            // bubble.style.background = gradients[gradientIndex];
+        }
+        window.onresize = function(){
+            const coordsIn = activeAnchor.getBoundingClientRect();
+            const directionsIn = {
+                height: coordsIn.height,
+                width: coordsIn.width,
+                top: coordsIn.top,
+                left: coordsIn.left
+            };
+            bubble.style.setProperty("left", `${directionsIn.left}px`);
+            bubble.style.setProperty("top", `${directionsIn.top}px`);
+            bubble.style.setProperty("width", `${directionsIn.width}px`);
+            bubble.style.setProperty("height", `${directionsIn.height}px`);
         }
     });
 }
