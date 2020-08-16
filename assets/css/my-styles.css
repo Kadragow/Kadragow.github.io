@@ -12,14 +12,15 @@ body {
     font-family: 'Orbitron', sans-serif;
 }
 
-header {
+.header {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     background: #0a0a0a;
 }
 
-nav {
+.nav {
     min-height: 10vh;
     margin: auto;
     width: 90%;
@@ -28,20 +29,20 @@ nav {
     justify-content: space-between;
 }
 
-nav h1,
+.nav h1,
 .menu-nav{
     font-size: 1.5rem;
     flex: 1;
 }
 
-nav ul{
+.nav ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
 }
 
-nav a,
-nav h1{
+.nav a,
+.nav h1{
     color: aliceblue;
     text-shadow: 5px 2px 5px red;
     text-decoration: none;
@@ -101,20 +102,21 @@ section h2 {
 }
 
 @media screen and (max-width:1024px){
-    nav li {
+    .nav li {
         padding-right: 25px;
     }
 }
 
 @media screen and (max-width:768px){
-    body{
+    html, body{
         overflow-x: hidden;
     }
+    
     .menu-nav {
-        box-shadow: 0px 0px 20px red inset;
+        /* box-shadow: 0px 0px 20px red inset; */
         position: absolute;
         right: 0px;
-        height: 25vh;
+        /* height: ; */
         top: 10vh;
         background-color: #0a0a0a;
         display: flex;
