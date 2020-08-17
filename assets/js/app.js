@@ -1,10 +1,19 @@
 const sections = document.querySelectorAll('section');
 const bubble = document.querySelector('.bubble');
+const slideshow_img = document.querySelectorAll('.my-photos img');
 const gradients = [
     "linear-gradient(to right top, black, red)",
     "linear-gradient(to left top, red, black)",
     "linear-gradient(to right top, black, red )",
     "linear-gradient(to left top, red, black)"
+];
+
+const images = [
+    "./assets/images/saturn.jpg",
+    "./assets/images/jupiter.jpg",
+    "./assets/images/mars.jpg",
+    "./assets/images/mars.png",
+    "./assets/images/venus.png"
 ];
 
 const options = {
@@ -59,6 +68,34 @@ const navSlide = () => {
         nav.classList.toggle('menu-nav-active');
         menu.classList.toggle('hidden-menu-toggle');
     });
+
+    const menu_active = document.querySelectorAll('.menu-nav li');
+
+    menu_active.forEach(element => {
+            element.addEventListener('click', () => {
+                nav.classList.toggle('menu-nav-active');
+                menu.classList.toggle('hidden-menu-toggle');
+
+        });
+    });
 }
 
 navSlide();
+
+function slideShow(){
+    slideshow_img[0].setAttribute('src', images[0]);
+    slideshow_img[0].setAttribute('idx', 0);
+    slideshow_img[1].setAttribute('src', images[1]);
+    slideshow_img[1].setAttribute('idx', 1);
+    slideshow_img[2].setAttribute('src', images[2]);
+    slideshow_img[2].setAttribute('idx', 2);
+    setInterval(function(){
+        slideshow_img.forEach( img => {
+            let newIdx = (parseInt(img.getAttribute('idx')) + 1) % images.length;
+            img.setAttribute('src', images[newIdx]);
+            img.setAttribute('idx', newIdx);
+        });
+    },3000);
+}
+
+slideShow();

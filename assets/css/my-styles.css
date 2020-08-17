@@ -291,29 +291,6 @@ section div{
     }
 }
 
-/* .w2{
-    opacity: 0;
-    pointer-events: none;
-    animation-delay: 3s;
-    animation: appear 1.5s ease-in forwards;
-    animation: fade 1.5s ease-out forwards;
-
-} */
-
-
-/* 
-.hello{
-    animation: fade 1.5s ease forwards;
-} */
-
-/* .hello-me{
-    display: none;
-    opacity: 0;
-    animation-delay: 1.5s;
-    animation: appear 1.5s ease forwards;
-} */
-
-
 @keyframes fade{
     0%{
         opacity: 1;
