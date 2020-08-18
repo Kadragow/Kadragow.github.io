@@ -125,11 +125,25 @@ section div{
     font-size: 4rem;
 }
 
+.container-bg{
+    position: absolute;
+    margin-top: 6rem;
+    margin-left: 2.5%;
+    border-radius: 2%;
+    min-width: 95%;
+    min-height: 100%;
+    animation: pulse 5s ease infinite;
+}
+
 .container{
     position: absolute;
     margin-top: 6rem;
     margin-left: 2.5%;
-    background-color: #0a0a0a;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background: url("/assets/images/cool-bg.png") no-repeat center !important;
     border-radius: 2%;
     box-shadow: 0px 0px 10px red, 0px 0px 40px red;
     min-width: 95%;
@@ -137,6 +151,11 @@ section div{
 }
 
 .home .container{
+    margin-top: 0;
+    min-height: 110%;
+}
+
+.home .container-bg{
     margin-top: 0;
     min-height: 110%;
 }
@@ -256,6 +275,15 @@ section div{
         min-height: 95%;
     }
 
+    .container-bg{
+        min-height: 95%;
+    }
+
+}
+@media screen and (max-width:1024px) and (orientation: landscape){
+    .my-photos{
+        bottom: 1%;
+    }
 }
 
 @media screen and (max-width:768px){   
@@ -306,7 +334,24 @@ section div{
         max-height: 90%;
         display: block;
     }
+    .my-photos h4{
+        font-size: .6rem;
+    }
+
 }
+
+@media screen and (max-width:768px) and (orientation: landscape){
+    .my-photos{
+        bottom: 1%;
+        left: 8%;
+        top:55%;
+    }
+
+    .my-photos h4{
+        display: none;
+    }
+}
+
 
 @keyframes fade{
     0%{
@@ -334,5 +379,16 @@ section div{
     to{
         opacity: 1;
         pointer-events: all;
+    }
+}
+@keyframes pulse{
+    0%{
+        background-color: rgb(50, 0, 0);
+    }
+    50%{
+        background-color: rgb(200, 0, 0);
+    }
+    100%{
+        background-color: rgb(50, 0, 0);
     }
 }
