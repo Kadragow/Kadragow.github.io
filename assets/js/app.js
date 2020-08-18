@@ -73,8 +73,10 @@ const navSlide = () => {
 
     menu_active.forEach(element => {
             element.addEventListener('click', () => {
-                nav.classList.toggle('menu-nav-active');
-                menu.classList.toggle('hidden-menu-toggle');
+                if(nav.classList.contains('menu-nav-active')){
+                    nav.classList.toggle('menu-nav-active');
+                    menu.classList.toggle('hidden-menu-toggle');
+                }
 
         });
     });
