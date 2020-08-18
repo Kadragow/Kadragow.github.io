@@ -264,6 +264,8 @@ section div{
     display: flex;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
+    padding-left: 10%;
+    padding-right: 10%;
     flex-wrap: wrap;
 }
 
@@ -322,7 +324,7 @@ section div{
     position: absolute;
     text-align: center;
     bottom: 2.5%;
-    width: 100%;
+    width: 80%;
     /* right: 45%; */
 }
 
@@ -424,6 +426,12 @@ section div{
 
     .projects .container{
         padding-bottom: 25%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .annotation{
+        width: 100%;
     }
 
     .project-card{
