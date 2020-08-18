@@ -326,7 +326,7 @@ section div{
     .my-photos{
         max-width: 20%;
         height: 70%;
-        top: 35%;
+        bottom: 20%;
         left: 2.5%;
     }
     .my-photos img{
@@ -336,15 +336,16 @@ section div{
     }
     .my-photos h4{
         font-size: .6rem;
+        margin-left: 20%;
     }
 
 }
 
 @media screen and (max-width:768px) and (orientation: landscape){
     .my-photos{
-        bottom: 1%;
+        /* bottom: 25%; */
         left: 8%;
-        top:55%;
+        /* top:65%; */
     }
 
     .my-photos h4{

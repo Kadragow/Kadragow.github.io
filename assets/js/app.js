@@ -89,15 +89,15 @@ function slideShow(){
     slideshow_img[0].setAttribute('idx', 0);
     slideshow_img[1].setAttribute('src', images[1]);
     slideshow_img[1].setAttribute('idx', 1);
-    slideshow_img[2].setAttribute('src', images[2]);
-    slideshow_img[2].setAttribute('idx', 2);
+    // slideshow_img[2].setAttribute('src', images[2]);
+    // slideshow_img[2].setAttribute('idx', 2);
     setInterval(function(){
         slideshow_img.forEach( img => {
             let newIdx = (parseInt(img.getAttribute('idx')) + 1) % images.length;
             img.setAttribute('src', images[newIdx]);
             img.setAttribute('idx', newIdx);
         });
-    },3000);
+    },5000);
 }
 
 slideShow();
