@@ -132,6 +132,7 @@ section div{
     border-radius: 2%;
     min-width: 95%;
     min-height: 100%;
+    box-shadow: 0px 0px 10px red, 0px 0px 40px red;
     animation: pulse 5s ease infinite;
 }
 
@@ -145,7 +146,6 @@ section div{
     background-size: contain;
     background: url("/assets/images/cool-bg.png") no-repeat center !important;
     border-radius: 2%;
-    box-shadow: 0px 0px 10px red, 0px 0px 40px red;
     min-width: 95%;
     max-width: 95%;
     min-height: 100%;
@@ -475,6 +475,33 @@ section div{
     .my-photos h4{
         display: none;
     }
+
+    .projects{
+        min-height: 125vh;
+    }
+
+    .projects .container{
+        padding-bottom: 5%;
+        margin-bottom: 10vh;
+    }
+
+    .project-card{
+        padding: 5px;
+    }
+
+    .project-card img {
+        border: none;
+    }
+
+    section 
+
+    .project-card .but{
+        position: absolute;
+        right: 50%;
+        top: 25%;
+        margin:0%;
+    }
+    
 }
 
 
@@ -508,12 +535,15 @@ section div{
 }
 @keyframes pulse{
     0%{
+        box-shadow: 0px 0px 10px rgb(50, 0, 0), 0px 0px 40px rgb(170, 0, 0);
         background-color: rgb(50, 0, 0);
     }
     50%{
+        box-shadow: 0px 0px 10px red, 0px 0px 40px red;
         background-color: rgb(200, 0, 0);
     }
     100%{
+        box-shadow: 0px 0px 10px rgb(50, 0, 0), 0px 0px 40px rgb(170, 0, 0);
         background-color: rgb(50, 0, 0);
     }
 }
