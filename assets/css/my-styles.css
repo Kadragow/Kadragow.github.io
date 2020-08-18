@@ -147,7 +147,9 @@ section div{
     border-radius: 2%;
     box-shadow: 0px 0px 10px red, 0px 0px 40px red;
     min-width: 95%;
+    max-width: 95%;
     min-height: 100%;
+    max-height: 100%;
 }
 
 .home .container{
@@ -258,6 +260,85 @@ section div{
     margin: 0.5rem;
 }
 
+.projects .container{
+    display: flex;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-wrap: wrap;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card{
+    width: 35vh;
+    height: 40vh;
+    border-radius: 5%;
+    border: solid black;
+    box-shadow: 5px 5px 5px black, 5px 5px 5px red;
+    background: #0a0a0a;
+    margin: auto;
+    display: inline-block;
+    align-self: center;
+    padding: 2%;
+}
+
+.project-card .title{
+    width: 100%;
+    min-height: 1rem;
+    text-align: center;
+}
+
+.project-card img{
+    border-radius: 5%;
+    border: solid #b30000;
+    box-shadow: 0px 0px 5px red;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 5%;
+    object-fit: contain;
+}
+
+.project-card .but{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.but a{
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    color: white;
+    border: groove red;
+    background: #0a0a0a;
+    padding: 0.3rem;
+}
+
+.annotation{
+    position: absolute;
+    text-align: center;
+    bottom: 2.5%;
+    width: 80%;
+    /* right: 45%; */
+}
+
+.annotation h3{
+    display: inline;
+}
+
+.annotation a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: red;
+}
+
+
 @media screen and (max-width:1024px){
     .nav li {
         padding-right: 25px;
@@ -277,6 +358,11 @@ section div{
 
     .container-bg{
         min-height: 95%;
+    }
+
+    .project-card{
+        width: 30%;
+        height: auto;
     }
 
 }
@@ -336,6 +422,44 @@ section div{
     }
     .my-photos h4{
         font-size: .6rem;
+    }
+
+    .projects .container{
+        padding-bottom: 25%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .annotation{
+        width: 100%;
+    }
+
+    .project-card{
+        margin:0%;
+        width:80%;
+        height: 15vh;
+        position: relative;
+    }
+
+    .project-card img{
+        margin:0%;
+        float: left;
+    }
+    .project-card .but{
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        margin:0%;
+    }
+    .project-card .title{
+        float: right;
+        width: auto;
+    }
+
+    .but a{
+        width: 20%;
+        padding: 0.1rem;
+        font-size: 50%;
     }
 
 }
