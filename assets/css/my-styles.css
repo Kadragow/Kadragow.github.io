@@ -338,6 +338,60 @@ section div{
     color: red;
 }
 
+.contact .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-container{
+    width: 70%;
+    min-height: 10rem;
+    justify-content: space-around;
+    align-self: center;
+    position: relative;
+}
+
+.gate{
+    position: absolute;
+    top: 0%;
+    min-width: 100%;
+    min-height: 50%;
+    border: solid black;
+    background-color: rgb(3, 3, 3, 0.9);
+}
+
+.open{
+    animation: open-gate 1s ease forwards;
+    -webkit-animation: open-gate 1s ease forwards;
+    -moz-animation: open-gate 1s ease forwards;
+}
+
+.hole{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(5, 5, 5);
+    border: solid black;
+    border-left: red;
+    border-right: red;
+    display: flex;
+    justify-content: center;
+    -moz-box-shadow:    inset 0 0 20px red;
+    -webkit-box-shadow: inset 0 0 20px red;
+    box-shadow: inline 0px 0px 20px red;
+}
+
+.contact-text{
+    text-align: center;    
+    margin:auto;
+}
+
+.contact-text a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: aliceblue;
+}
+
 
 @media screen and (max-width:1024px){
     .nav li {
@@ -463,13 +517,26 @@ section div{
         font-size: 50%;
     }
 
+    .email a{
+        font-size: 70%;
+    }
+
+    .contact .container .row .contact-container{
+        max-height: 20vh;
+        min-height: 20vh;
+    }
+
 }
 
 @media screen and (max-width:768px) and (orientation: landscape){
     .my-photos{
-        /* bottom: 25%; */
-        left: 8%;
+        bottom: 10%;
+        left: 5%;
         /* top:65%; */
+    }
+
+    .my-photos img{
+        display: inline-block;
     }
 
     .my-photos h4{
@@ -521,6 +588,16 @@ section div{
         transform: translateX(-100%);
         pointer-events: none;
     }
+}
+
+@keyframes open-gate{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+    
 }
 
 @keyframes appear{
