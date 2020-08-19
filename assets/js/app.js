@@ -1,6 +1,7 @@
 const sections = document.querySelectorAll('section');
 const bubble = document.querySelector('.bubble');
 const slideshow_img = document.querySelectorAll('.my-photos img');
+const contacts = document.querySelectorAll('.gate');
 const gradients = [
     "linear-gradient(to right top, black, red)",
     "linear-gradient(to left top, red, black)",
@@ -26,7 +27,7 @@ function navCheck(entries){
     entries.forEach(entry => {
         const className = entry.target.className;
         const activeAnchor = document.querySelector(`[data-page=${className}]`);
-        const gradientIndex = entry.target.getAttribute('data-index');
+        const sectionName = entry.target.getAttribute('id');
         const coords = activeAnchor.getBoundingClientRect();
         const directions = {
             height: coords.height,
@@ -39,6 +40,10 @@ function navCheck(entries){
             bubble.style.setProperty("top", `${directions.top}px`);
             bubble.style.setProperty("width", `${directions.width}px`);
             bubble.style.setProperty("height", `${directions.height}px`);
+            if(sectionName=='contact' && !contacts[0].classList.contains('.open')){
+                openGates();
+                
+            }
         }
         window.onresize = function(){
             const coordsIn = activeAnchor.getBoundingClientRect();
@@ -101,3 +106,13 @@ function slideShow(){
 }
 
 slideShow();
+
+function openGates(){
+    let i = 1;
+    contacts.forEach(contact => {
+        setTimeout(function(){
+            contact.classList.add('open');
+        },i * 1500);
+        i++;
+    });
+}
