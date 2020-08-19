@@ -352,6 +352,8 @@ section div{
     min-width: 100%;
     min-height: 50%;
     border: solid black;
+    border-left: solid rgb(50, 0, 0);
+    border-right: solid rgb(50, 0, 0);
     background-color: rgb(3, 3, 3, 0.9);
 }
 
@@ -367,8 +369,8 @@ section div{
     width: 100%;
     background-color: rgb(5, 5, 5);
     border: solid black;
-    border-left: red;
-    border-right: red;
+    border-left: solid red;
+    border-right: solid red;
     display: flex;
     justify-content: center;
     -moz-box-shadow:    inset 0 0 20px red;

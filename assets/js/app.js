@@ -112,7 +112,7 @@ function openGates(){
     contacts.forEach(contact => {
         setTimeout(function(){
             contact.classList.add('open');
-        },i * 1500);
+        },i * 750);
         i++;
     });
 }
