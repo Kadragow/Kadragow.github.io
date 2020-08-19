@@ -88,7 +88,6 @@ section {
     min-height: 110vh;
     padding-top:10vh;
     display: flex;
-    /* box-shadow: 0px 0px 10px red; */
 }
 
 section h2 {
@@ -140,11 +139,7 @@ section div{
     position: absolute;
     margin-top: 6rem;
     margin-left: 2.5%;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    background: url("/assets/images/cool-bg.png") no-repeat center !important;
+    background: url("/assets/images/cool-bg.png");
     border-radius: 2%;
     min-width: 95%;
     max-width: 95%;
