@@ -77,6 +77,10 @@ html, body {
     justify-content: space-between;
 }
 
+.nav a:hover{
+    color: red;
+}
+
 .nav a,
 .nav h1{
     color: aliceblue;
