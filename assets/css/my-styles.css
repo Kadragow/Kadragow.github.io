@@ -98,15 +98,24 @@ section h2 {
     font-size: 5rem;
 }
 
+.about{
+    position: relative;
+}
 
-.home h3 {
+.about h3 {
     text-align: justify;
     letter-spacing: 0.4rem;
     line-height: 2rem;
     width: 65%;
     position: absolute;
-    top: 15%;
+    top: 25%;
     right: 7.5%;
+}
+
+.about .container,
+.about .container-bg{
+    min-height: 90%;
+    max-height: 90%;
 }
 
 .contact {
@@ -235,7 +244,7 @@ section div{
     border-radius: 50%;
     border-bottom: solid red;
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: 5%;
 }
 
@@ -399,7 +408,7 @@ section div{
         padding-right: 25px;
     }
 
-    .home h3 {
+    .about h3 {
         font-size: 0.9rem;
         letter-spacing: 0.2rem;
         line-height: 1.75rem;
@@ -428,7 +437,7 @@ section div{
 }
 
 @media screen and (max-width:768px){   
-    .home h3 {
+    .about h3 {
         font-size: 0.6rem;
         letter-spacing: 0.1rem;
         line-height: 1.5rem;
@@ -478,6 +487,12 @@ section div{
     .my-photos h4{
         font-size: .6rem;
         margin-left: 20%;
+    }
+
+    .about .container,
+    .about .container-bg{
+        min-height: 85%;
+        max-height: 85%;
     }
 
     .projects .container{
